@@ -9,5 +9,11 @@ public class App {
                 (HelloWorld) applicationContext.getBean("helloworld");
         Cat catBean =
                 (Cat) applicationContext.getBean("cat");
+        HelloWorld helloWorldBean =
+                (HelloWorld) applicationContext.getBean("helloworld");
+        Cat catBeanSecond =
+                (Cat) applicationContext.getBean("cat");
+        System.out.println("cats " + (catBean == catBeanSecond));
+        System.out.println("hello world  " + (bean == helloWorldBean));
     }
 }
